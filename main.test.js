@@ -1,6 +1,6 @@
 import { singTwelveDays } from "./main.js";
 //👉 Write your tests below here:
-test(`Should produce array of arrays with one more day of Christmas each time`, () => {
+test(`Should produce an array of arrays with one more day of Christmas each time`, () => {
   // arrange
   const array = [
     "12 drummers drumming",
@@ -116,5 +116,5 @@ test(`Should produce array of arrays with one more day of Christmas each time`, 
   const actual = singTwelveDays(array);
   // assert
 
-  expect(actual).toStrictEqual(expected);
+  expect(actual).toEqual(expect.arrayContaining(expected));
 });
